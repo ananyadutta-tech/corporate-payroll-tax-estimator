@@ -1,0 +1,153 @@
+CORPORATE PAYROLL TAX ESTIMATOR — VERSION 2
+Methods and Functions Used
+Language: Python
+GUI Library: Tkinter
+Tax Regime: India New Tax Regime (FY 2026–27)
+
+==================================================
+1. IMPORTED MODULES
+==================================================
+
+1. math
+   Used for mathematical operations and checking whether salary values are finite.
+
+2. tkinter
+   Used to create the graphical user interface (GUI).
+
+3. messagebox
+   Used to display error messages and validation alerts.
+
+4. ttk
+   Used to create styled GUI components, including the tax breakdown table.
+
+==================================================
+2. USER-DEFINED FUNCTIONS
+==================================================
+
+1. rupees(amount)
+   Converts numerical amounts into Indian currency format (₹) with two decimal places.
+
+2. calculate_tax(gross_salary)
+   Calculates annual income tax based on the new tax regime.
+   It performs:
+   - Standard deduction
+   - Taxable income calculation
+   - Progressive tax slab calculation
+   - Section 87A rebate and marginal relief
+   - 4% Health and Education Cess
+   - Net annual and monthly salary calculation
+
+3. tax_breakdown(taxable)
+   Calculates the taxable income and corresponding tax for each income slab.
+   Returns the results for displaying in the tax breakdown table.
+
+4. add_field(parent, label, row)
+   Creates labelled input fields for employee information.
+
+5. make_card(parent, label, initial, accent)
+   Creates dashboard cards to display important payroll information, such as annual tax and monthly net salary.
+
+6. calculate_payroll()
+   Collects employee details, validates the entered information, calls the tax calculation function, and updates the dashboard with calculated results.
+
+7. clear_fields()
+   Clears all input fields and resets the dashboard to its initial state.
+
+8. build_window()
+   Creates the main application window and arranges all GUI components, including:
+   - Header section
+   - Employee details form
+   - Salary summary
+   - Tax calculation cards
+   - Progressive tax breakdown table
+   - Status messages
+
+==================================================
+3. PYTHON CONDITIONAL STATEMENTS
+==================================================
+
+1. if-elif-else
+   Used to determine the applicable income tax slab based on taxable income.
+
+2. Input validation conditions
+   Used to check whether required employee details are entered and whether salary values are valid.
+
+==================================================
+4. PYTHON LOOPS
+==================================================
+
+1. for loop
+   Used to:
+   - Display salary summary fields.
+   - Clear input fields.
+   - Remove previous tax table records.
+   - Insert updated tax slab records.
+
+==================================================
+5. TKINTER GUI COMPONENTS
+==================================================
+
+1. Tk()
+   Creates the main application window.
+
+2. Frame()
+   Organises the interface into different sections.
+
+3. Label()
+   Displays headings, descriptions, and calculated values.
+
+4. Entry()
+   Accepts employee information and salary input.
+
+5. Button()
+   Provides Calculate Payroll and Clear All functionality.
+
+6. StringVar()
+   Dynamically updates displayed information.
+
+7. Treeview()
+   Displays the progressive income tax breakdown in tabular form.
+
+8. Style()
+   Customises the appearance of the table.
+
+9. messagebox.showerror()
+   Displays validation and error messages.
+
+10. mainloop()
+    Keeps the GUI application running and responsive.
+
+==================================================
+6. MAIN EXECUTION
+==================================================
+
+if __name__ == "__main__":
+    build_window()
+
+This condition ensures that the application starts by calling build_window() when the Python file is executed directly.
+
+==================================================
+7. PROJECT WORKING FLOW
+==================================================
+
+Step 1: Enter employee name, employee ID, department, and gross annual salary.
+
+Step 2: Click the Calculate Payroll button.
+
+Step 3: Validate the entered information.
+
+Step 4: Calculate standard deduction and taxable income.
+
+Step 5: Determine income tax using if-elif-else conditions.
+
+Step 6: Calculate eligible rebate or marginal relief and cess.
+
+Step 7: Calculate net annual and monthly salary.
+
+Step 8: Display the salary summary and progressive tax breakdown.
+
+Step 9: Use Clear All to reset the application.
+
+==================================================
+END OF DOCUMENT
+==================================================
